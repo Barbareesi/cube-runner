@@ -1,0 +1,348 @@
+.shop-shell {
+  width: min(100%, 1050px);
+  margin: 0 auto;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.shop-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 0 15px;
+  border: 1px solid #ffe18a;
+  border-radius: 10px;
+  background: #ffd166;
+  box-shadow: 0 5px 18px rgb(255 185 70 / 20%);
+  color: #172035;
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: background 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.shop-link:hover {
+  background: #ffdc80;
+  box-shadow: 0 7px 22px rgb(255 185 70 / 30%);
+  transform: translateY(-2px);
+}
+
+.wallet {
+  color: #ffd84d;
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.shop-intro {
+  margin: 48px 0 26px;
+}
+
+.shop-eyebrow {
+  margin: 0;
+  color: var(--lime);
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+}
+
+.shop-intro h1 {
+  margin: 9px 0 8px;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  letter-spacing: -0.075em;
+  line-height: 1;
+}
+
+.shop-intro h1 span {
+  color: var(--lime);
+}
+
+.shop-intro > p:last-child {
+  margin: 0;
+  color: #9aa5c3;
+  font-size: 0.9rem;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.preview-card,
+.shop-section {
+  border: 1px solid rgb(137 157 226 / 16%);
+  border-radius: 17px;
+  background: rgb(24 33 60 / 75%);
+}
+
+.preview-card {
+  display: flex;
+  min-height: 485px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.preview-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 18px 20px 10px;
+  color: #9da8c8;
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.preview-stage {
+  position: relative;
+  flex: 1;
+  min-height: 360px;
+  background:
+    radial-gradient(ellipse at 50% 59%, rgb(101 117 255 / 22%), transparent 57%),
+    linear-gradient(180deg, #18213d, #202b50);
+}
+
+.preview-stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.preview-caption {
+  margin: 0;
+  padding: 14px 20px 18px;
+  color: #a4afce;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.customization {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.shop-section {
+  padding: 21px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin: 5px 0 0;
+  font-size: 1.17rem;
+  letter-spacing: -0.04em;
+}
+
+.section-note {
+  color: #8792b2;
+  font-family: "DM Mono", monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.color-choice {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  padding: 7px 3px 4px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #aab4d0;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.59rem;
+}
+
+.color-choice:hover,
+.color-choice[aria-pressed="true"] {
+  border-color: rgb(215 255 112 / 43%);
+  background: rgb(215 255 112 / 6%);
+}
+
+.color-swatch {
+  width: 27px;
+  height: 27px;
+  border: 2px solid rgb(255 255 255 / 46%);
+  border-radius: 50%;
+  background: var(--swatch-color);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--swatch-color) 35%, transparent);
+}
+
+.accessory-list {
+  display: grid;
+  gap: 9px;
+}
+
+.accessory-card {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 11px 12px;
+  border: 1px solid rgb(161 177 228 / 12%);
+  border-radius: 11px;
+  background: rgb(255 255 255 / 2%);
+}
+
+.accessory-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 5%);
+  font-size: 1.4rem;
+}
+
+.accessory-info strong,
+.accessory-info small {
+  display: block;
+}
+
+.accessory-info strong {
+  font-size: 0.77rem;
+}
+
+.accessory-info small {
+  margin-top: 3px;
+  color: #8995b5;
+  font-size: 0.65rem;
+}
+
+.accessory-button {
+  min-width: 88px;
+  min-height: 34px;
+  padding: 0 9px;
+  border: 1px solid rgb(215 255 112 / 22%);
+  border-radius: 8px;
+  background: rgb(215 255 112 / 8%);
+  color: var(--lime);
+  cursor: pointer;
+  font-family: "DM Mono", monospace;
+  font-size: 0.6rem;
+}
+
+.accessory-button:hover:not(:disabled) {
+  background: rgb(215 255 112 / 15%);
+}
+
+.accessory-button:disabled {
+  border-color: rgb(161 177 228 / 10%);
+  background: rgb(255 255 255 / 3%);
+  color: #7d89a9;
+  cursor: default;
+}
+
+.shop-status {
+  min-height: 20px;
+  margin: -7px 2px 0;
+  color: var(--lime);
+  font-size: 0.72rem;
+}
+
+.shop-footer {
+  margin-top: 24px;
+}
+
+.shop-link:focus-visible,
+.color-choice:focus-visible,
+.accessory-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .shop-intro {
+    margin-top: 32px;
+  }
+
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-card {
+    min-height: 390px;
+  }
+
+  .preview-stage {
+    min-height: 300px;
+  }
+
+  .customization {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px 14px 24px;
+  }
+
+  .shop-topbar {
+    margin-bottom: 10px;
+  }
+
+  .shop-topbar .top-note,
+  .back-link {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .shop-intro {
+    margin: 24px 0 20px;
+  }
+
+  .preview-card {
+    min-height: 335px;
+  }
+
+  .preview-stage {
+    min-height: 245px;
+  }
+
+  .shop-section {
+    padding: 17px 14px;
+  }
+
+  .color-grid {
+    gap: 3px;
+  }
+
+  .accessory-card {
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+    gap: 9px;
+    padding-inline: 9px;
+  }
+
+  .accessory-icon {
+    width: 36px;
+    height: 36px;
+  }
+}

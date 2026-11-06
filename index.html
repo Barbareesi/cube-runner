@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10172d">
+    <title>Neon Dash — 3D Runner</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Neon Dash home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>NEON<span class="brand-accent">DASH</span></span>
+        </a>
+        <p class="top-note">A LITTLE RUN GOES A LONG WAY</p>
+        <div class="header-actions">
+          <a class="shop-link" href="shop.html">CUBE SHOP <span aria-hidden="true">↗</span></a>
+          <div class="wallet">● <span id="wallet">0</span></div>
+          <div class="best-score">BEST <span id="best-score">0</span></div>
+        </div>
+      </header>
+
+      <section class="game-layout" aria-label="Neon Dash game">
+        <div class="game-stage">
+          <div class="stage-glow" aria-hidden="true"></div>
+          <div class="hud">
+            <div class="score-box">
+              <span class="hud-label">SCORE</span>
+              <span class="score" id="score" aria-live="polite">0000</span>
+            </div>
+            <div class="lane-indicator" aria-hidden="true">
+              <span></span><span class="is-current"></span><span></span>
+            </div>
+            <div class="speed-box">
+              <span class="hud-label">SPEED</span>
+              <span class="speed" id="speed">1.0x</span>
+            </div>
+          </div>
+
+          <div class="canvas-wrap" id="canvas-wrap" aria-label="Three-dimensional endless runner">
+            <p class="load-message" id="load-message" role="status">Building your track…</p>
+          </div>
+
+          <div class="overlay" id="overlay">
+            <div class="overlay-card">
+              <div class="overlay-kicker" id="overlay-kicker">READY, RUNNER?</div>
+              <div class="overlay-icon" id="overlay-icon" aria-hidden="true">🏁</div>
+              <h1 id="overlay-title">Neon Dash</h1>
+              <p id="overlay-message">Dodge the city traffic, grab shiny coins, and see how far you can run.</p>
+              <button class="play-button" id="play-button" type="button">LET’S RUN <span aria-hidden="true">→</span></button>
+              <div class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd> change lane <span class="hint-divider">·</span> <kbd>↑</kbd> or <kbd>SPACE</kbd> jump</div>
+            </div>
+          </div>
+
+          <div class="toast" id="toast" aria-live="polite"></div>
+        </div>
+
+        <aside class="side-panel">
+          <div class="panel-heading">
+            <span class="panel-dot"></span>
+            <span>THE TRACK</span>
+          </div>
+          <h2>Three lanes.<br><span>One more run.</span></h2>
+          <p class="panel-copy">Run through a bright little city, dodge the blocks, and scoop up coins. The farther you go, the faster and busier traffic gets.</p>
+
+          <div class="control-list">
+            <div class="control-item">
+              <span class="key-pair"><kbd>←</kbd><kbd>→</kbd></span>
+              <span><strong>Switch lanes</strong><small>Slide left or right</small></span>
+            </div>
+            <div class="control-item">
+              <span class="key-pair"><kbd>↑</kbd><kbd>SPACE</kbd></span>
+              <span><strong>Jump</strong><small>Clear the obstacles</small></span>
+            </div>
+          </div>
+
+          <div class="tip-card">
+            <span class="tip-icon" aria-hidden="true">✦</span>
+            <p><strong>Quick tip</strong><br>Follow coin trails with lane changes. Jump over blocks when you need to.</p>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <span>BUILT FOR THE LONG RUN</span>
+        <span class="footer-center">✦ &nbsp; KEEP MOVING</span>
+        <span>NO FINISH LINE IN SIGHT</span>
+      </footer>
+    </main>
+
+    <div class="touch-controls" aria-label="Touch controls">
+      <button id="left-button" type="button" aria-label="Move left">←</button>
+      <button id="jump-button" type="button" aria-label="Jump">↑</button>
+      <button id="right-button" type="button" aria-label="Move right">→</button>
+    </div>
+  </body>
+</html>

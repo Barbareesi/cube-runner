@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10172d">
+    <title>Runner Shop — Neon Dash</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+    <script type="module" src="shop.js"></script>
+  </head>
+  <body>
+    <main class="shop-shell">
+      <header class="topbar shop-topbar">
+        <a class="brand" href="index.html" aria-label="Neon Dash home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>NEON<span class="brand-accent">DASH</span></span>
+        </a>
+        <p class="top-note">MAKE YOUR RUN YOURS</p>
+        <div class="header-actions">
+          <div class="wallet">● <span id="wallet">0</span> COINS</div>
+          <a class="shop-link back-link" href="index.html">BACK TO RUN <span aria-hidden="true">→</span></a>
+        </div>
+      </header>
+
+      <section class="shop-intro">
+        <p class="shop-eyebrow">THE RUNNER SHOP</p>
+        <h1>Style your cube<span>.</span></h1>
+        <p>Pick a color, grab an accessory, and take your look back to the track.</p>
+      </section>
+
+      <section class="shop-grid" aria-label="Runner customization">
+        <div class="preview-card">
+          <div class="preview-label"><span class="panel-dot"></span> LIVE PREVIEW</div>
+          <div class="preview-stage" id="preview-stage" aria-label="3D preview of your cube">
+            <p class="load-message" id="preview-loading" role="status">Loading your cube…</p>
+          </div>
+          <p class="preview-caption" id="preview-caption">Your runner, your style.</p>
+        </div>
+
+        <div class="customization">
+          <section class="shop-section">
+            <div class="section-heading">
+              <div><p class="shop-eyebrow">01 / COLOR</p><h2>Choose a color</h2></div>
+              <span class="section-note">FREE</span>
+            </div>
+            <div class="color-grid" id="color-options" aria-label="Cube color"></div>
+          </section>
+
+          <section class="shop-section accessory-section">
+            <div class="section-heading">
+              <div><p class="shop-eyebrow">02 / ACCESSORIES</p><h2>Fresh gear</h2></div>
+              <span class="section-note">COINS</span>
+            </div>
+            <div class="accessory-list" id="accessory-list"></div>
+          </section>
+          <p class="shop-status" id="shop-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+      <footer class="footer shop-footer">
+        <span>COINS YOU COLLECT STAY IN YOUR WALLET</span>
+        <span>BACK TO THE TRACK WHENEVER YOU’RE READY</span>
+      </footer>
+    </main>
+  </body>
+</html>
